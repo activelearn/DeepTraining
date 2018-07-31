@@ -1,1 +1,1 @@
-# DeepTraining
+# Practical Deep Learning Course
