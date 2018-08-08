@@ -15,15 +15,20 @@ class Activation(object):
 
 
 class Relu(Activation):
+    def forward(self, x):
+        return np.maximum(0, x)
+
+    def backward(self, x):
+        return 1. * (x > 0)
+
+class Sigmoid(Activation):
     pass
+
 
 class Softmax(Activation):
     pass
 
 
-class Loss(Activation):
-    pass
-
-
-class CrossEntropy(Loss):
-    pass
+relu = Relu()
+sigmoid = Sigmoid()
+softmax = Softmax()
