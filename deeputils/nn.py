@@ -9,8 +9,8 @@ if __name__ == "__main__":
     x_test = x_test.reshape(x_test.shape[0], -1)
 
     neuralnets = Network()
-    neuralnets.add(Dense(shape=(x_train.shape[1], 200), activation="relu"))
-    neuralnets.add(Dense(shape=(200, 10), activation="relu"))
+    neuralnets.add(Dense(shape=(x_train.shape[1], 200), activation="elu"))
+    neuralnets.add(Dense(shape=(200, 10), activation="elu"))
     neuralnets.compile(loss="cross_entropy", lr=0.01)
     neuralnets.fit(x_train, y_train, 200, 20000, 0)
 
